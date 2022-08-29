@@ -10,7 +10,7 @@ public class Main {
 		
 		
 		
-		
+//While loop to loop through as long as option 6(Quit) is not selected		
 		while(!input.equals(6)) {
 			
 			System.out.println("Please choose what you'd like to do with the database:");
@@ -22,7 +22,7 @@ public class Main {
 			System.out.println("|5| Delete address book");
 			System.out.println("|6| Quit");
 			System.out.println();
-			
+// Try/Catch block to catch if the user doesn't put in a number/option			
 			try {
 				int selection = input.nextInt();
 			
@@ -75,7 +75,7 @@ public class Main {
 			
 			case 6:{
 				System.out.println("Have a wonderful day!");
-				
+// Always close scanner and make sure to exit program as to not have leaks and take up unnecessary memory/space.				
 				input.close();
 				System.exit(0);	
 			}

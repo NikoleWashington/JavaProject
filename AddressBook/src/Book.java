@@ -8,14 +8,14 @@ public class Book {
 	
 	List<Entry> entries = new ArrayList<>();
 	
-
+//Add an entry
 	public void addEntry(Entry newEntry){
 		entries.add(newEntry);
 		System.out.println("You've added a new entry:\n" + newEntry.toString());
 		System.out.println();
 	}
 	
-
+//Remove an entry
 	public void removeEntry(String removeEmail) {
 		for(int i = 0; i<entries.size(); i++) {
 			Entry result = entries.get(i);
@@ -36,7 +36,8 @@ public class Book {
 //			}
 //		}
 	}
-
+//Search an entry by searching for everything - first name, last name, email or phone#
+// I also made it to where it doesn't matter if it's lowercase, uppercase or partial search
 	public void searchEntry(String searchTerm) {
 		boolean found = false;
 		for(Entry entry : entries) { 
@@ -52,7 +53,7 @@ public class Book {
 		}
 	}
 	
-
+//Print Address Book
 	public void printAddressBook() {
 		boolean checkBookEntries = entries.isEmpty();
 		for(Entry print : entries) 
@@ -63,7 +64,7 @@ public class Book {
 		}
 		
 	}
-
+//Delete contents in address book
 	public void deleteAddressBook() {
 		entries.clear();
 		System.out.println("The address book has been cleared!");
